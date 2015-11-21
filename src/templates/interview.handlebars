@@ -1,9 +1,15 @@
+<header>
+    <h1>Freelance Checklist</h1>
+    <h2>Interview en checklist voor freelance webdesigners.</h2>
+</header>
+
 {{#each this}}
 <article class="interview__question">
     <label for="question{{@key}}">{{ question }}</label>
     <textarea name="question{{@key}}" rows="1" id="question{{@key}}" />
 </article>
 {{/each}}
+
 <div class="controls">
     <div class="button--green" id="export">Exporteren</div>
     <div class="button--reset" id="reset">Reset</div>

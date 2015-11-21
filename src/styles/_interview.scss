@@ -25,9 +25,11 @@
         color: $c_white;
         outline: none;
         padding: 0 0 $d_small 0;
-        overflow: hidden;
-        resize: none;
         line-height: $t_line_height;
+
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        resize: none;
 
         &:focus, &:active {
             border-bottom: 2px solid $c_green;
