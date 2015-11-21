@@ -1,3 +1,11 @@
+#menu {
+    display: none;
+}
+
+.checklist-mobile {
+    display: none;
+}
+
 @media screen and (max-width: 920px) {
     .interview, .checklist {
         width: 50%;
@@ -15,7 +23,7 @@
         }
     }
 
-    .checklist {
+    .checklist, .checklist-mobile {
         padding-top: $d_large;
     }
 }
@@ -23,12 +31,30 @@
 @media screen and (max-width: 740px) {
     section {
         padding: 0 $d_medium $d_large;
-        min-height: 0;
     }
-    .interview, .checklist {
+    .interview, .checklist-mobile {
         width: 100%;
     }
     .interview {
         padding-right: $d_medium;
+    }
+
+    .checklist {
+        display: none;
+    }
+
+    .checklist-mobile {
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    #menu {
+        display: block;
     }
 }

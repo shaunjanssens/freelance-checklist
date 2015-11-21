@@ -1,4 +1,4 @@
-.checklist {
+.checklist, .checklist-mobile {
     background: $c_green;
     width: 40%;
     padding-top: 130px;
@@ -59,5 +59,29 @@
 
     input {
         display: none;
+    }
+
+    #menu {
+        text-indent: -9999px;
+        position: relative;
+        float: right;
+        top: -8px;
+        width: 25px;
+        height: 21px;
+
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 25px;
+            height: 2px;
+            background: $c_white;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
     }
 }

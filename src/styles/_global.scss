@@ -76,6 +76,7 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 0 $d_large $d_ultra;
+    overflow: hidden;
 }
 
 /**
@@ -91,12 +92,14 @@ header {
 
     h1 {
         font-size: 36px;
+        float: left;
     }
 
     h2 {
         font-size: $t_size-medium;
         color: $c_grey;
         font-weight: 400;
+        clear: both;
     }
 }
 
@@ -132,3 +135,4 @@ header {
         float: right;
     }
 }
+

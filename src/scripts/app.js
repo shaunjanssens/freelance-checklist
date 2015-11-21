@@ -195,6 +195,8 @@ $(document).ready(function() {
             var handlebars = Handlebars.templates['checklist'];
             $(this.checklist_container).empty().append(handlebars(tasks));
 
+            $(".checklist-mobile").empty().append(handlebars(tasks));
+
             checklist.loadStorage();
         },
 
@@ -292,14 +294,19 @@ $(document).ready(function() {
     });
 
     // Export all data
-    $(document).on("click", "#export", function(event) {
+    $(document).on("click touchstart", "#export", function(event) {
         alert("Deze werkt nog niet");
     });
 
     // Reset all data
-    $(document).on("click", "#reset", function(event) {
+    $(document).on("click touchstart", "#reset", function(event) {
         interview.hard_reset();
         checklist.hard_reset();
+    });
+
+    // Mobile menu
+    $(document).on("click touchstart", "#menu", function(event) {
+        $(".checklist-mobile").toggleClass("active");
     });
 
     // Check hash change
