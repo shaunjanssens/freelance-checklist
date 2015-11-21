@@ -1,0 +1,6 @@
+{{#each this}}
+    <label for="task{{@key}}" data-id="task{{@key}}">
+        <input type="checkbox" name="task{{@key}}" id="task{{@key}}">
+        {{ task }}
+    </label>
+{{/each}}

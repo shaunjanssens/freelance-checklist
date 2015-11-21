@@ -1,0 +1,63 @@
+.checklist {
+    background: $c_green;
+    width: 40%;
+    padding-top: 130px;
+    color: $c_white;
+
+    h2 {
+        color: $c_white;
+        text-transform: uppercase;
+        font-size: $t_size-base;
+        font-weight: 600;
+        letter-spacing: 3px;
+        margin-bottom: $d_medium;
+    }
+
+    label {
+        position: relative;
+        display: block;
+        margin: 0 0 $d_small 0;
+        padding: 0 0 0 $d_small;
+        color: rgba($c_white, 1);
+        transition: all .3s;
+        padding-bottom: $d_small;
+
+
+        &.done {
+            color: rgba($c_white, .6);
+            transition: all .3s;
+        }
+
+        &.done:after {
+            width: 100%;
+            transition: all .3s;
+        }
+
+        &:before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: $c_white;
+            top: 9px;
+            left: -$d_small;
+        }
+
+        &:after {
+            content: "";
+            position: relative;
+            display: block;
+            width: 0%;
+            height: 1px;
+            background: $c_white;
+            top: -7px;
+            transition: all .3s;
+        }
+    }
+
+    input {
+        display: none;
+    }
+}

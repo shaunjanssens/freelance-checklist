@@ -1,0 +1,31 @@
+@media screen and (max-width: 920px) {
+    .interview, .checklist {
+        width: 50%;
+    }
+
+    header {
+        margin: $d_large 0 $d_medium;
+
+        h1 {
+            font-size: $t_size-big;
+        }
+
+        h2 {
+            font-size: $t_size-base;
+        }
+    }
+
+    .checklist {
+        padding-top: $d_large;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    section {
+        padding: 0 $d_medium $d_large;
+        min-height: 0;
+    }
+    .interview, .checklist {
+        width: 100%;
+    }
+}

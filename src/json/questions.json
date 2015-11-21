@@ -1,0 +1,137 @@
+[
+  {
+    "question": "Hoe heet het bedrijf?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat is de slogan?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat zijn de contactgegevens van het bedrijf?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat doet het bedrijf?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welke producten zijn er en welk product is het belangrijkste?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Hoe ziet het bedrijf er uit binnen 5 jaar?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wie zijn de directe concurenten?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Waardoor onderscheid het bedrijf zich van de concurenten?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Waarom wil het bedrijf een nieuwe website?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat zijn de huidige struikelblokken?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welk doelpubliek wil het bedrijf bereiken?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Waarover is het bedrijf tevreden op de huidige website? (indien redesign)",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat vindt het bedrijf belangrijk aan een website?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat moet de klant bereiken na een bezoek aan de website?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welke zoektermen zou het bedrijf gebruiken op op haar eigen website uit te komen?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Hoe maakt het bedrijf zich nu kenbaar bij haar publiek?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat vindt het bedrijf goed of mooi aan een website? Zijn er voorbeelden?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wat vindt het bedrijf slecht of lelijk aan een website? Zijn er voorbeelden?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welke accentkleur(en) gebruikt het bedrijf of wil het graag gebruiken?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welke kleuren mogen er zeker niet voorkomen op de website?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Is er reeds een branding aanwezig?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Worden de teksten aangeleverd of werk ik samen met een copywriter?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wordt het beeldmateriaal aangeleverd of werk ik samen met een fotograaf?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wordt de online marketing gedaan door een ander bedrijf?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welke periodes zijn belangrijk voor het bedrijf?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Wanneer moet het project klaar zijn?",
+    "tooltip": "",
+    "type": "text"
+  },
+  {
+    "question": "Welk budget is voorzien voor dit project?",
+    "tooltip": "",
+    "type": "text"
+  }
+]

@@ -1,0 +1,40 @@
+.interview {
+    background: $c_black;
+    width: 60%;
+    padding-right: $d_large;
+
+    label {
+        display: block;
+        color: $c_grey;
+        padding: $d_medium*2 0 $d_small;
+        margin-bottom: -30px;
+        transition: all .3s;
+
+        &.active {
+            margin-bottom: 0;
+            transition: all .3s;
+        }
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        background: none;
+        border: none;
+        border-bottom: 2px solid $c_grey;
+        color: $c_white;
+        outline: none;
+        padding: 0 0 $d_small 0;
+        overflow: hidden;
+        resize: none;
+        line-height: $t_line_height;
+
+        &:focus, &:active {
+            border-bottom: 2px solid $c_green;
+        }
+    }
+
+    .controls {
+        margin: $d_large 0;
+    }
+}

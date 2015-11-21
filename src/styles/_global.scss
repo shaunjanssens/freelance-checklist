@@ -1,0 +1,134 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;;
+}
+
+input {
+    -webkit-border-radius:0;
+    border-radius:0;
+}
+
+body {
+    background: $c_black;
+    font-family: $t_font-family;
+    font-size: $t_size-base;
+    line-height: 1;
+}
+
+/**
+ * Typography
+ */
+h1, h2, h3 {
+    font-weight: 100;
+    margin: 0;
+}
+
+h1 {
+    font-size: $t_size-big;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: $t_size-medium;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: $t_size-medium;
+    letter-spacing: 2px;
+}
+
+p {
+    line-height: $t_line_height;
+    margin-bottom: $d_small;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * 
+ */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: $d_container;
+    margin: 0 auto;
+    
+    &:after {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        right: 0;
+        background: $c_green;
+        z-index: -1;
+    }
+}
+
+section {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 $d_large $d_ultra;
+}
+
+/**
+ * Header
+ */
+header {
+    margin: $d_ultra 0 $d_large;
+
+    h1, h2 {
+        color: $c_white;
+        line-height: $t_line_height;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: $t_size-medium;
+        color: $c_grey;
+        font-weight: 400;
+    }
+}
+
+/**
+ * Buttons
+ */
+.button {
+    display: block;
+    float: left;
+    padding: $d_medium $d_medium*2;
+    margin: 0 $d_medium 0 0;
+    border-radius: $e_border-radius;
+    font-weight: 600;
+    cursor: pointer;
+    
+    &--green {
+        @extend .button;
+        background: $c_green;
+        color: $c_white;
+    }
+
+    &--white {
+        @extend .button;
+        border: 2px solid $c_white;
+        color: $c_white;
+    }
+
+    &--reset {
+        @extend .button;
+        background: lighten($c_black, 10);
+        color: darken($c_white, 20);
+        margin: 0;
+        float: right;
+    }
+}
