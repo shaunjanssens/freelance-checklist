@@ -39,6 +39,8 @@ $(document).ready(function() {
         hash : "",
         interview_container : ".interview",
         textarea_container : ".interview article textarea",
+        answers : "",
+        api_url : "php/index.php",
 
         init : function(hash) {
             this.soft_reset();
@@ -96,7 +98,7 @@ $(document).ready(function() {
         },
 
         /**
-         * Load data from localstorage
+         * Load data from database
          */
         loadStorage : function() {
             var data = localStorage.getItem(this.hash + "_questions");
@@ -146,6 +148,41 @@ $(document).ready(function() {
                 var offset = element.offsetHeight - element.clientHeight;
                 $(element).css('height', 'auto').css('height', element.scrollHeight + offset);
             }
+        },
+
+        export : function() {
+            var questions = $(this.textarea_container);
+
+            var data = localStorage.getItem(this.hash + "_questions");
+            data = JSON.parse(data);
+
+            var export_data = {};
+
+            for (var question in data) {
+                var element = $("#" + question);
+
+                if(element[0].value) {
+                    var label = element.prev("label")[0].innerText;
+                    var value = element[0].value;
+
+                    export_data[label] = value;
+                }
+            }
+
+            export_data = JSON.stringify(export_data);
+
+            jQuery.ajax({
+                url: interview.api_url,
+                type: "post",
+                dataType: "json",
+                data: { data: export_data },
+                success: function(data) {
+                    console.log(data);
+                },
+                error : function(xhr, textStatus, errorThrown) {
+                    alert("Error: fout bij versturen van data. Code: " + xhr.status);
+                }
+            });
         }
 
     };
@@ -295,7 +332,7 @@ $(document).ready(function() {
 
     // Export all data
     $(document).on("click touchstart", "#export", function(event) {
-        alert("Deze werkt nog niet");
+        interview.export();
     });
 
     // Reset all data

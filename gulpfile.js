@@ -25,6 +25,13 @@ gulp.task('html', function(){
         .pipe(livereload());
 });
 
+// API
+gulp.task('php', function(){
+    gulp.src(['src/php/**/*'])
+        .pipe(gulp.dest('build/php'))
+        .pipe(livereload());
+});
+
 // Styles
 gulp.task('styles', function() {
     return sass('src/styles/style.scss', { style: 'expanded' })
@@ -86,7 +93,7 @@ gulp.task('json', function(){
 // Clean
 gulp.task('clean', function(cb) {
     del(['build/', 'build/css', 'build/js', 'build/img', 'build/json'], cb);
-    gulp.start('html', 'styles', 'handlebars-template', 'scripts', 'images', 'jquery', 'handlebars', 'json');
+    gulp.start('html', 'styles', 'handlebars-template', 'scripts', 'images', 'jquery', 'handlebars', 'json', 'php');
 });
 
 // Server
@@ -98,7 +105,7 @@ gulp.task('server', function(cb) {
 });
 
 // Default task
-gulp.task('default', ['html', 'styles', 'handlebars-template', 'scripts', 'images', 'jquery', 'handlebars', 'json', 'server', 'watch']);
+gulp.task('default', ['html', 'styles', 'handlebars-template', 'scripts', 'images', 'jquery', 'handlebars', 'json', 'php', 'server', 'watch']);
 
 // Watch
 gulp.task('watch', function() {
@@ -116,8 +123,11 @@ gulp.task('watch', function() {
     // Watch html files
     gulp.watch('src/html/**/*', ['html']);
 
-    // Watch html files
+    // Watch json files
     gulp.watch('src/json/**/*', ['json']);
+
+    // Watch php files
+    gulp.watch('src/php/**/*', ['php']);
 
     // Watch html files
     gulp.watch('src/templates/**/*', ['handlebars-template']);
